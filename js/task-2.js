@@ -17,17 +17,15 @@ const ingredients = [
 
 */
 
-const ingredients = ["Картошка", "Грибы", "Чеснок", "Помидоры", "Зелень", "Приправы"];
-const ingridientEl = document.createElement("li");
-const ul = document.querySelector("#ingredients");
+// const ingredients = ["Картошка", "Грибы", "Чеснок", "Помидоры", "Зелень", "Приправы"];
+// const ingridientEl = document.createElement("li");
+// const ul = document.querySelector("#ingredients");
 
-const markupli = ingredients.reduce((string, item) => string + `<li>${item}</li>`, "");
+// const markupli = ingredients.reduce((string, item) => string + `<li>${item}</li>`, "");
+// ul.innerHTML = markupli;
 
-ul.innerHTML = markupli;
-
-//================ Варіант з MDN ================
-
-// const ul = document.querySelector("#ingredients"); // assuming ul exists
+//================= чрез фрагмент к показував Андрій ======================
+// const ul = document.querySelector("#ingredients");
 // const fragment = document.createDocumentFragment();
 // const ingredients = ["Картошка", "Грибы", "Чеснок", "Помидоры", "Зелень", "Приправы"];
 
@@ -37,3 +35,13 @@ ul.innerHTML = markupli;
 // 	fragment.appendChild(li);
 // });
 // ul.append(fragment);
+
+//===========================================================================
+const ingredients = ["Картошка", "Грибы", "Чеснок", "Помидоры", "Зелень", "Приправы"];
+let ulElem = document.querySelector("#ingredients");
+const liElem = function (item) {
+	const liItem = document.createElement("li");
+	ulElem.append(liItem);
+	liItem.textContent = item;
+};
+ingredients.forEach(liElem);

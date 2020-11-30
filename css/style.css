@@ -1,7 +1,6 @@
 img {
 	display: block;
-	flex-direction: column;
-	width: 320px;
+	width: 220px;
 	margin: 10px;
 }
 

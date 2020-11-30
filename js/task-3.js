@@ -35,9 +35,7 @@ const img = document.createElement("img");
 
 const ul = document.querySelector("#gallery");
 
-let imagesArr = [...images];
-
-const imgRef = imagesArr.reduce(
+const imgRef = images.reduce(
 	(string, item) => string + `<li><img src="${item.url}" alt="${item.alt}" ></li>`,
 	"",
 );
