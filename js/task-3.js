@@ -41,4 +41,4 @@ const imgRef = images.reduce(
 );
 console.log(imgRef);
 
-ul.innerHTML = imgRef;
+ul.insertAdjacentHTML("afterbegin", imgRef);
